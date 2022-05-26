@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<link rel="stylesheet" type="text/css" href="styles/styles.css">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Readex+Pro&display=swap" rel="stylesheet">
+
+	<title>Random Number Gen</title>
+</head>
+
+<body>
+	<div class="topNav" id="topNav">
+		<a href="javascript:void(0);" class="icon" onclick="navHamburgerFunction()">
+			<i class="fa fa-bars"></i>
+		</a>
+		<div id="links">
+			<a href="colour.html">Colour</a>
+			<a href="number.html">Number</a>
+			<a href="word.html">Word</a>
+			<a href="names.html">Names</a>
+			<a href="#">Other</a>
+		</div>
+	</div>
+	<br>
+	<h1>Random Number Generator</h1>
+	<br>
+	<div class="palette">
+		<div class="inputs">
+			<div class="inputs-col">
+				<label for="firstNumber" id="labelLeft">First Number (Default Is 1)</label>
+				<br>
+				<input type="number" id="inputLeft" value="" class="inputLeft" name="firstNumber" maxlength="25" required>
+				<br>
+			</div>
+			<br>
+			<div class="inputs-col">
+				<label for="secondNumber" id="labelRight">Second Number</label>
+				<br>
+				<input type="number" id="inputRight" name="secondNumber" maxlength="25" required>
+				<br>
+			</div>
+		</div>
+		<button class="" onclick="output();">Generate</button>
+		<div id="copySuccess"></div>
+		<br>
+		<br>
+
+		<div class="randomNumber centre" id="randomNumber" onClick="navigator.clipboard.writeText(x); copySuccess()">
+		</div>
+	</div>
+</body>
+
+<script type="text/javascript" src="js/random-number.js"></script>
+
+</html>

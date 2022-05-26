@@ -1,0 +1,128 @@
+* {
+	margin: 0;
+	box-sizing: border-box;
+	font-family: 'Readex Pro', sans-serif;
+}
+
+body {
+	height: 100vh;
+	margin: 0;
+	place-items: center;
+	padding: 1rem;
+}
+
+h1 {
+	font-size: 3.5rem;
+	text-align: center;
+	margin: 1rem;
+}
+
+h3 {
+	margin: 1rem;
+	font-size: medium;
+}
+
+h3 a {
+	text-decoration: none;
+	color: black;
+}
+
+p {
+	text-align: center;
+	margin: 0;
+	position: relative;
+	top: 50%;
+	-ms-transform: translateY(-50%);
+	transform: translateY(-50%);
+}
+
+button {
+	height: 3rem;
+	width: 10rem;
+	margin: 1rem;
+	background-color: white;
+	border-radius: 5px;
+	border-color: lightgrey;
+	border-style: solid;
+	font-size: 1.0rem;
+}
+
+.palette {
+	margin-top: 5rem;
+	height: 50vh;
+	text-align: center;
+}
+
+.centre {
+	margin: 0;
+	position: relative;
+	height: auto;
+	width: 50%;
+	left: 25%;
+}
+
+/* Random Colour Generator */
+
+.colorBox {
+	height: 25vh;
+	width: 50%;
+	float: left;
+	border-radius: 10px;
+	background-color: beige;
+}
+
+.RGB-To-HEX-Switch {
+	position: fixed;
+	text-align: right;
+	top: 0;
+	right: 0;
+}
+
+.rgbValue, .hexValue {
+	position: relative;
+	height: 50%;
+}
+
+/* Random Number Generator */
+
+.randomNumber, .randomWord, .randomName {
+	padding: 5rem;
+	height: 25vh;
+	background-color: lightblue;
+	font-size: 5vh;
+	border-radius: 1rem;
+}
+
+.randomNumber p {
+	margin: auto;
+}
+
+label {
+	height: 1rem;
+}
+
+input {
+	margin: 0.5rem;
+	width: 100%;
+}
+
+input[type=number] {
+	color: grey;
+	text-align: center;
+  }
+
+.inputs {
+	display: flex;
+	margin-left: 25%;
+}
+
+.inputs-col {
+	width: 25vw;
+	padding: 2.5vw;
+}
+
+.submitButton {
+	padding: 0.5rem;
+	font-size: 1rem;
+	border-radius: 5px;
+}

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<link rel="stylesheet" type="text/css" href="styles/styles.css">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Readex+Pro&display=swap" rel="stylesheet">
+
+	<title>Random Word Gen</title>
+</head>
+
+<body>
+	<div class="topNav" id="topNav">
+		<a href="javascript:void(0);" class="icon" onclick="navHamburgerFunction()">
+			<i class="fa fa-bars"></i>
+		</a>
+		<div id="links">
+			<a href="colour.html">Colour</a>
+			<a href="number.html">Number</a>
+			<a href="word.html">Word</a>
+			<a href="names.html">Names</a>
+			<a href="#">Other</a>
+		</div>
+	</div>
+	<br>
+	<h1>Random Name Generator</h1>
+	<br>
+	<div class="palette">
+		<button class="" onclick="outputName();">Generate</button>
+		<div id="copySuccess"></div>
+		<br>
+		<br>
+
+		<div class="randomName centre" id="randomName" onClick="navigator.clipboard.writeText(randomWord); copySuccess()">
+		</div>
+	</div>
+</body>
+
+<script type="text/javascript" src="js/random-name.js"></script>
+<script type="text/json" src="names.txt"></script>
+
+</html>
