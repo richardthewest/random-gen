@@ -1,5 +1,5 @@
 //random name generator
-const url = "names.txt";
+const url = "https://raw.githubusercontent.com/richardthewest/random-gen/main/names.txt?token=GHSAT0AAAAAABU7YGUVLQ3VBJOUT7BX52E2YUQCYVA";
 
 function outputName() {
     fetch(url)
@@ -7,19 +7,17 @@ function outputName() {
   		return response.text();
 	})
 	.then((text) => {
-        console.log(text);
-        
-        //const arr = text.split(/\r?\n/);
+        const arr = text.split(/\r?\n/);
         //test for array
         //let y = Array.isArray(arr);
 
         //random number generator
-        //let arrLength = arr.length;
-        //var x = Math.floor((Math.random() * arrLength));
+        let arrLength = arr.length;
+        var x = Math.floor((Math.random() * arrLength));
 
-        //let randomName = arr[x];
-        //console.log(randomName);
-        //document.getElementById('randomName').innerHTML = randomName;
+        let randomName = arr[x];
+        console.log(randomName);
+        document.getElementById('randomName').innerHTML = randomName;
 	});
 };
 
