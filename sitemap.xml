@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url>
+    <loc>index.html</loc>
+    <lastmod>2022-03-31</lastmod>
+  </url>
+  <url>
+    <loc>colour.html</loc>
+    <lastmod>2022-05-26</lastmod>
+  </url>
+  <url>
+    <loc>names.html</loc>
+    <lastmod>2022-05-26</lastmod>
+  </url>
+  <url>
+    <loc>number.html</loc>
+    <lastmod>2022-05-26</lastmod>
+  </url>
+  <url>
+    <loc>word.html</loc>
+    <lastmod>2022-05-27</lastmod>
+  </url>
+</urlset>
