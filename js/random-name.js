@@ -26,5 +26,6 @@ function copySuccess() {
     var pasteRandomName = document.getElementById('randomName').innerHTML;
     navigator.clipboard.writeText(pasteRandomName);
     console.log("Copy Success");
+    console.log("Confirm Name: " + pasteRandomName)
     document.getElementById("copySuccess").innerHTML = '<p>Copied To Clipboard</p>';
 };

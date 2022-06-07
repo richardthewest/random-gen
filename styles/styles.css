@@ -47,6 +47,41 @@ button {
 	font-size: 1.0rem;
 }
 
+button:hover {
+	background-color: lightgray;
+	cursor: pointer;
+}
+
+ul {
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+	overflow: hidden;
+}
+
+li {
+	float: left;
+}
+
+li a {
+	display: block;
+	color: #111;
+	text-align: center;
+	padding: 14px 16px;
+	text-decoration: none;
+}
+
+/* Change the link color to #111 (black) on hover */
+li a:hover {
+	background-color: grey;
+	color: white;
+}
+
+.active {
+	background-color: grey;
+	color: white;
+}
+
 .palette {
 	margin-top: 5rem;
 	height: 50vh;
@@ -78,19 +113,28 @@ button {
 	right: 0;
 }
 
-.rgbValue, .hexValue {
+.rgbValue,
+.hexValue {
 	position: relative;
 	height: 50%;
 }
 
 /* Random Number Generator */
 
-.randomNumber, .randomWord, .randomName {
+.randomNumber,
+.randomWord,
+.randomName {
 	padding: 5rem;
 	height: 25vh;
 	background-color: lightblue;
 	font-size: 5vh;
 	border-radius: 1rem;
+}
+
+.randomNumber,
+.randomWord,
+.randomName {
+	cursor: pointer;
 }
 
 .randomNumber p {
@@ -109,7 +153,7 @@ input {
 input[type=number] {
 	color: grey;
 	text-align: center;
-  }
+}
 
 .inputs {
 	display: flex;

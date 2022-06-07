@@ -15,16 +15,18 @@
 
 <body>
 	<div class="topNav" id="topNav">
+		<!--
 		<a href="javascript:void(0);" class="icon" onclick="navHamburgerFunction()">
 			<i class="fa fa-bars"></i>
 		</a>
-		<div id="links">
-			<a href="colour.html">Colour</a>
-			<a href="number.html">Number</a>
-			<a href="word.html">Word</a>
-			<a href="names.html">Names</a>
-			<a href="#">Other</a>
-		</div>
+		-->
+		<ul id="links">
+			<li><a href="colour.html" title="Random Colour Generator" target="_self">Colour</a></li>
+			<li><a href="number.html" title="Random Number Generator" class="active" target="_self">Number</a></li>
+			<li><a href="word.html" title="Random Word Generator" target="_self">Word</a></li>
+			<li><a href="names.html" title="Random Name Generator" target="_self">Names</a></li>
+			<li><a href="#" title="blank" target="_self">Other</a></li>
+		</ul>
 	</div>
 	<br>
 	<h1>Random Number Generator</h1>
@@ -32,14 +34,14 @@
 	<div class="palette">
 		<div class="inputs">
 			<div class="inputs-col">
-				<label for="firstNumber" id="labelLeft">First Number (Default Is 1)</label>
+				<label for="firstNumber" id="labelLeft">First Number<br>(Default Is 1)</label>
 				<br>
 				<input type="number" id="inputLeft" value="" class="inputLeft" name="firstNumber" maxlength="25" required>
 				<br>
 			</div>
 			<br>
 			<div class="inputs-col">
-				<label for="secondNumber" id="labelRight">Second Number</label>
+				<label for="secondNumber" id="labelRight">Second<br>Number</label>
 				<br>
 				<input type="number" id="inputRight" name="secondNumber" maxlength="25" required>
 				<br>
@@ -50,7 +52,7 @@
 		<br>
 		<br>
 
-		<div class="randomNumber centre" id="randomNumber" onClick="navigator.clipboard.writeText(x); copySuccess()">
+		<div class="randomNumber centre" id="randomNumber" onClick="copySuccess()">
 		</div>
 	</div>
 </body>

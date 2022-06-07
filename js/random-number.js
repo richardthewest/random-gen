@@ -11,5 +11,8 @@ function output() {
 //Copy Success Function
 function copySuccess() {
     console.log("Copy Success");
+    var pasteRandomNumber = document.getElementById('randomNumber').innerHTML;
+    navigator.clipboard.writeText(pasteRandomNumber);
+    console.log("Confirm Num: " + pasteRandomNumber);
     document.getElementById("copySuccess").innerHTML = '<p>Copied To Clipboard</p>';
 };
