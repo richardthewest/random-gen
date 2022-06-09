@@ -1,5 +1,5 @@
 //random name generator
-const url = "https://raw.githubusercontent.com/richardthewest/random-gen/main/names.txt?token=GHSAT0AAAAAABU7YGUVLQ3VBJOUT7BX52E2YUQCYVA";
+const url = "https://raw.githubusercontent.com/richardthewest/random-gen/main/data/names.txt";
 
 function outputName() {
     fetch(url)

@@ -10,7 +10,7 @@
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 	<link href="https://fonts.googleapis.com/css2?family=Readex+Pro&display=swap" rel="stylesheet">
 
-	<title>Random Word Gen</title>
+	<title>Random Movie Gen</title>
 </head>
 
 <body>
@@ -23,26 +23,26 @@
 		<ul id="links">
 			<li><a href="colour.html" title="Random Colour Generator" target="_self">Colour</a></li>
 			<li><a href="number.html" title="Random Number Generator" target="_self">Number</a></li>
-			<li><a href="word.html" title="Random Word Generator" class="active" target="_self">Word</a></li>
+			<li><a href="word.html" title="Random Word Generator" target="_self">Word</a></li>
 			<li><a href="names.html" title="Random Name Generator" target="_self">Names</a></li>
-			<li><a href="movie.html" title="blank" target="_self">Movies</a></li>
+			<li><a href="movie.html" title="Random Movie Generator" class="active" target="_self">Movie</a></li>
 		</ul>
 	</div>
 	<br>
-	<h1>Random Word Generator</h1>
+	<h1>Random Movie Generator</h1>
 	<br>
 	<div class="palette">
-		<button class="" onclick="outputWord();">Generate</button>
+		<button class="" onclick="outputMovie();">Generate</button>
 		<div id="copySuccess"></div>
 		<br>
 		<br>
 
-		<div class="randomWord centre" id="randomWord" onClick="navigator.clipboard.writeText(randomWord); copySuccess()">
+		<div class="randomMovie centre" id="randomMovie" onClick="navigator.clipboard.writeText(randomMovie); copySuccess()">
 		</div>
 	</div>
 </body>
 
-<script type="text/javascript" src="js/random-word.js"></script>
-<script type="text" src="names.txt"></script>
+<script type="text/javascript" src="js/random-movie.js"></script>
+<script type="text/json" src="data/movies.txt"></script>
 
 </html>
