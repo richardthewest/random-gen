@@ -51,10 +51,12 @@ function outputMovie() {
         //define inner HTML to display
         let movieGenreTitle = (genreTitle(moviesList)[x]);
         let movieGenreCode = (genreCode(moviesList)[x]);
-        let webLink = 'www.netflix.com/browse/genre/' + movieGenreCode
+        let webLink = 'https://www.netflix.com/browse/genre/' + movieGenreCode
         console.log(webLink);
 
-        //document.getElementById('randomMovie').innerHTML = webLink;
+        let href = '<a class="externalLink centre" href="' + webLink + ' " target="_blank">' + movieGenreTitle + '</a>';
+
+        document.getElementById('randomMovie').innerHTML = href;
 	});
 };
 

@@ -71,16 +71,21 @@ li a {
 	text-decoration: none;
 }
 
+
 /* Change the link color to #111 (black) on hover */
 li a:hover {
 	background-color: grey;
 	color: white;
 }
 
+
 .active {
 	background-color: grey;
 	color: white;
 }
+
+
+/* General Sryling */
 
 .palette {
 	margin-top: 5rem;
@@ -95,6 +100,25 @@ li a:hover {
 	width: 50%;
 	left: 25%;
 }
+
+.randomNumber,
+.randomWord,
+.randomName,
+.randomMovie {
+	padding: 5rem;
+	height: 25vh;
+	background-color: lightblue;
+	font-size: 5vh;
+	border-radius: 1rem;
+}
+
+.randomNumber,
+.randomWord,
+.randomName,
+.randomMovie {
+	cursor: pointer;
+}
+
 
 /* Random Colour Generator */
 
@@ -119,24 +143,8 @@ li a:hover {
 	height: 50%;
 }
 
+
 /* Random Number Generator */
-
-.randomNumber,
-.randomWord,
-.randomName,
-.randomMovie {
-	padding: 5rem;
-	height: 25vh;
-	background-color: lightblue;
-	font-size: 5vh;
-	border-radius: 1rem;
-}
-
-.randomNumber,
-.randomWord,
-.randomName {
-	cursor: pointer;
-}
 
 .randomNumber p {
 	margin: auto;
@@ -170,4 +178,9 @@ input[type=number] {
 	padding: 0.5rem;
 	font-size: 1rem;
 	border-radius: 5px;
+}
+
+.externalLink {
+	display: block;
+	font-size: 2rem;
 }
