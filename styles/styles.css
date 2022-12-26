@@ -88,7 +88,9 @@ li a:hover {
 /* General Sryling */
 
 .palette {
-	margin-top: 5rem;
+	/*
+	margin-top: 5rem; 
+	*/
 	height: 50vh;
 	text-align: center;
 }
@@ -143,6 +145,20 @@ li a:hover {
 	height: 50%;
 }
 
+/* Colour Wall Styling */
+
+
+.flex-container {
+	display: flex;
+	flex-wrap: wrap;
+	padding: 0.5rem;
+}
+
+.colorBoxSize {
+	border-style: solid;
+	height: 40vh;
+	width: 50%;
+}
 
 /* Random Number Generator */
 

@@ -1,11 +1,23 @@
 // Random Colour Generator JS
 
-//x equals amount of colours to generate
-var x = 4;
+//Count Qty of Colour Boxes
+const box = document.getElementById('colourPalette');
+const qtyOfColorBoxes = box.children.length;
+console.log(qtyOfColorBoxes);
+
+let x = qtyOfColorBoxes;
+
+
+
+//Arrange Colour Boxes on Screen evenly
+let rowLength = x * 0.5;
+
+console.log(rowLength);
+
 
 
 //Construct array or random colours 
-const colors = randomColor({ count: x });
+const colors = randomColor({ count: x});
 const rgbValues = [];
 
 //Create for loop for querySelector
@@ -15,8 +27,13 @@ for (i = 0; i < x; i++) {
     //document.getElementById("colour0" + (v -1)).innerHTML = divInner;
     //console.log("colour0" + (v -1));
 };
+
+
+//Test code above
 let divInner = "test";
 document.querySelectorAll(".colorBox").innerHTML = "test";
+
+
 
 
 /*
@@ -31,6 +48,9 @@ for (; i < x; i++) {
 //console.log(colorQty);
 */
 
+
+
+/*
 //create code to add regValue and hexVaue class divs to colorBox
 
 //colour 01
@@ -67,6 +87,8 @@ rgbValues[3] = color04.slice(4, stringEnd04);
 console.log(rgbValues[3], colors[3]);
 document.getElementsByClassName("rgbValue04").innerHTML = rgbValues[3];
 document.getElementsByClassName("hexValue04").innerHTML = colors[3];
+
+*/
 
 //Copy Success Function
 function copySuccess() {
