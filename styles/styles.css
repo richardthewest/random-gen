@@ -125,8 +125,6 @@ li a:hover {
 /* Random Colour Generator */
 
 .colorBox {
-	height: 25vh;
-	width: 50%;
 	float: left;
 	border-radius: 10px;
 	background-color: beige;
@@ -147,17 +145,19 @@ li a:hover {
 
 /* Colour Wall Styling */
 
-
 .flex-container {
+	/*
 	display: flex;
+	*/
 	flex-wrap: wrap;
-	padding: 0.5rem;
+	padding: 0.5rem 0;
+	height: 90vh;
 }
 
 .colorBoxSize {
 	border-style: solid;
-	height: 40vh;
-	width: 50%;
+	height: 100px;
+	width: 100px;
 }
 
 /* Random Number Generator */

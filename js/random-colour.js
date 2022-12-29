@@ -1,37 +1,47 @@
 // Random Colour Generator JS
 
-//Count Qty of Colour Boxes
-const box = document.getElementById('colourPalette');
-const qtyOfColorBoxes = box.children.length;
-console.log(qtyOfColorBoxes);
+window.onload = paletteSize;
+//window.onresize = paletteSize;
 
-let x = qtyOfColorBoxes;
+//Get window size and divide equally
+function paletteSize(){
+    var w = document.getElementById('colourPalette').offsetWidth;
+    var h = document.getElementById('colourPalette').offsetHeight;
+    console.log("Browser width: " + w + "px" + "\n" + "Browser height: " + h + "px");
+    
+    let preciseRowLength = w / 100;
+    let rowLength = Math.trunc(w / 100);
+
+    let preciseRowHeight = h / 100;
+    let rowHeight = Math.trunc(h / 100);
+    
+    console.log("Exact Row Length: " + preciseRowLength + "\n" + "Effective Row Length: " + rowLength + "\n" + "Exact Row Height: " + preciseRowHeight + "\n" + "Effective Row Height: " + rowHeight);
 
 
-
-//Arrange Colour Boxes on Screen evenly
-let rowLength = x * 0.5;
-
-console.log(rowLength);
-
-
+//Count Qty of Colour Boxes - This is just a test to Count End Result
+var qtyColorBox = rowLength * rowHeight;
+console.log(qtyColorBox);
 
 //Construct array or random colours 
-const colors = randomColor({ count: x});
+const colors = randomColor({ count: qtyColorBox});
 const rgbValues = [];
 
-//Create for loop for querySelector
-for (i = 0; i < x; i++) {
-    let v = i+1;
+
+//Construct (qtyColorBox) amount of colour boxes
+for (i = 0; i < qtyColorBox; i++) {
+    let v = i + 1;
+    const jsColourBox = document.createElement("div");
+    jsColourBox.className = "colorBox colorBoxSize";
+    document.getElementById('colourPalette').appendChild(jsColourBox);
     document.querySelector('.palette div:nth-child(' + v++ + ')').style.backgroundColor = colors[i];
-    //document.getElementById("colour0" + (v -1)).innerHTML = divInner;
-    //console.log("colour0" + (v -1));
 };
 
 
+
+
 //Test code above
-let divInner = "test";
-document.querySelectorAll(".colorBox").innerHTML = "test";
+//let divInner = "test";
+//document.querySelectorAll(".colorBox").innerHTML = "test";
 
 
 
@@ -61,24 +71,7 @@ console.log(rgbValues[0], colors[0]);
 document.getElementsByClassName("rgbValue01").innerHTML = rgbValues[0];
 document.getElementsByClassName("hexValue01").innerHTML = colors[0];
 
-
-//colour 02
-let color02 = document.getElementById("colour02").style.backgroundColor;
-let stringEnd02 = color02.length - 1;
-rgbValues[1] = color02.slice(4, stringEnd02);
-console.log(rgbValues[1], colors[1]);
-document.getElementsByClassName("rgbValue02").innerHTML = rgbValues[1];
-document.getElementsByClassName("hexValue02").innerHTML = colors[1];
-
-
-//colour 03
-let color03 = document.getElementById("colour03").style.backgroundColor;
-let stringEnd03 = color03.length - 1;
-rgbValues[2] = color03.slice(4, stringEnd03);
-console.log(rgbValues[2], colors[0]);
-document.getElementsByClassName("rgbValue03").innerHTML = rgbValues[2];
-document.getElementsByClassName("hexValue03").innerHTML = colors[2];
-
+//... cont.
 
 //colour 04
 let color04 = document.getElementById("colour04").style.backgroundColor;
@@ -87,13 +80,12 @@ rgbValues[3] = color04.slice(4, stringEnd04);
 console.log(rgbValues[3], colors[3]);
 document.getElementsByClassName("rgbValue04").innerHTML = rgbValues[3];
 document.getElementsByClassName("hexValue04").innerHTML = colors[3];
-
 */
 
 //Copy Success Function
 function copySuccess() {
     console.log("Copy Success");
-    document.getElementById("copySuccess").innerHTML = '<p>Copied To Clipboard</p>';
+    //document.getElementById("copySuccess").innerHTML = '<p>Copied To Clipboard</p>';
 };
 
 
@@ -120,3 +112,5 @@ function testFunc () {
 }
 
 */
+
+};
