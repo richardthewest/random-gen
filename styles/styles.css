@@ -146,16 +146,14 @@ li a:hover {
 /* Colour Wall Styling */
 
 .flex-container {
-	/*
 	display: flex;
-	*/
 	flex-wrap: wrap;
+	justify-content: space-around;
 	padding: 0.5rem 0;
 	height: 90vh;
 }
 
 .colorBoxSize {
-	border-style: solid;
 	height: 100px;
 	width: 100px;
 }
