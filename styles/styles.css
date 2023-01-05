@@ -36,6 +36,15 @@ p {
 	transform: translateY(-50%);
 }
 
+footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+	height: 5vh;
+	text-align: center;
+	color: #111;
+}
+
 button {
 	height: 3rem;
 	width: 10rem;
@@ -85,7 +94,18 @@ li a:hover {
 }
 
 
-/* General Sryling */
+/* Footer Styling */
+footer a {
+	text-decoration: none;
+	color: #111;
+}
+
+footer a:hover {
+	color: darkgray;
+}
+
+
+/* General Styling */
 
 .palette {
 	/*
@@ -150,7 +170,7 @@ li a:hover {
 	flex-wrap: wrap;
 	justify-content: space-around;
 	padding: 0.5rem 0;
-	height: 90vh;
+	height: 80vh;
 }
 
 .colorBoxSize {

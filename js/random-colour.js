@@ -8,30 +8,28 @@ window.onresize = function(){ location.reload(); };
 //Get window size and divide equally
 var w = document.getElementById('colourPalette').offsetWidth;
 var h = document.getElementById('colourPalette').offsetHeight;
-console.log("Browser width: " + w + "px" + "\n" + "Browser height: " + h + "px");
+//console.log("Browser width: " + w + "px" + "\n" + "Browser height: " + h + "px");
 
 let preciseRowLength = w / 100;
 let rowLength = Math.trunc(w / 100);
 
 let preciseRowHeight = h / 100;
-let rowHeight = Math.trunc(h / 100);
+let rowHeight = Math.trunc((h / 100) -1 );
 
-console.log("Exact Row Length: " + preciseRowLength + "\n" + "Effective Row Length: " + rowLength + "\n" + "Exact Row Height: " + preciseRowHeight + "\n" + "Effective Row Height: " + rowHeight);
+//console.log("Exact Row Length: " + preciseRowLength + "\n" + "Effective Row Length: " + rowLength + "\n" + "Exact Row Height: " + preciseRowHeight + "\n" + "Effective Row Height: " + rowHeight);
 
 
 //Count Qty of Colour Boxes - This is just a test to Count End Result
 var qtyColorBox = rowLength * rowHeight;
-console.log(qtyColorBox);
+//console.log(qtyColorBox);
 
 //Construct array or random colours 
 const colors = randomColor({ count: qtyColorBox});
 const rgbValues = [];
 
-//window.addEventListener("resize",
 
-
+//Create Pallete and colourBoxes
 function paletteSize(){
-
     for (i = 0; i < qtyColorBox; i++) {
         let v = i + 1;
         //console.log(v)
@@ -40,26 +38,27 @@ function paletteSize(){
         } else {
             const jsColourBox = document.createElement("div");
             jsColourBox.className = "colorBox colorBoxSize";
+            jsColourBox.setAttribute('onclick', 'navigator.clipboard.writeText(colors[' + i + ']); ' + 'console.log("Hex Colour ' + colors[i] + ', Copied to Clipboard")');
+
             document.getElementById('colourPalette').appendChild(jsColourBox);
             document.querySelector('.palette div:nth-child(' + v++ + ')').style.backgroundColor = colors[i];
+            //console.log(colors[i]);
         };
     };
-
 };
-//);
 
 
+
+/*
 //Copy Success Function
 function copySuccess() {
+    var pasteRandomColour = document.getElementsByClassName('.colorBox').innerHTML;
+    navigator.clipboard.writeText(pasteRandomColour);
     console.log("Copy Success");
+    console.log("Colour: " + pasteRandomColour)
     //document.getElementById("copySuccess").innerHTML = '<p>Copied To Clipboard</p>';
 };
 
-
-function clearPallete() {
-    const element = document.getElementsByClassName("colorBox");
-    element.style.backgroundColor = "black";
-};
 
 //Test code above
 //let divInner = "test";
