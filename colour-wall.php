@@ -15,7 +15,13 @@
 
 <body>
 	<h1>Random Colour Wall Generator</h1>
-    <div id="colourPalette" class="flex-container palette" onclick="">
+    
+	<div id="alert" class="alert" style="visibility: hidden;">
+		<!--visibility: hidden;-->
+		<p id="alert-text"></p>
+	</div>
+
+	<div id="colourPalette" class="flex-container palette">
     </div>
 </body>
 

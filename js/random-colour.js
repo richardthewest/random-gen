@@ -38,10 +38,27 @@ function paletteSize(){
         } else {
             const jsColourBox = document.createElement("div");
             jsColourBox.className = "colorBox colorBoxSize";
-            jsColourBox.setAttribute('onclick', 'navigator.clipboard.writeText(colors[' + i + ']); ' + 'console.log("Hex Colour ' + colors[i] + ', Copied to Clipboard")');
+            //jsColourBox.innerHTML = "<p class='colorBoxInnerText'></p>";
 
+            let copyColour = 'navigator.clipboard.writeText(' 
+            + '"' 
+            + colors[i] 
+            + '"' 
+            + '); '
+            + 'document.getElementById("alert").style.visibility = "visible"; '
+            + 'document.getElementById("alert-text").innerHTML = "HEX Code Copied To Clipboard"'
+            
+            setTimeout(() => {
+                document.getElementById("alert").style.visibility = "hidden";
+              }, "2000");
+
+            jsColourBox.setAttribute('onclick', copyColour);
+            jsColourBox.setAttribute('onmousedown', mouseClick);
             document.getElementById('colourPalette').appendChild(jsColourBox);
             document.querySelector('.palette div:nth-child(' + v++ + ')').style.backgroundColor = colors[i];
+            document.getElementById("alert").style.visibility = "hidden";
+
+            
             //console.log(colors[i]);
         };
     };
