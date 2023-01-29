@@ -1,4 +1,4 @@
-<footer>
+<footer id="footer">
 	<p>copyright 2023 || 
 		<a href="mailto:info@westsupport.com.au">
 			email
